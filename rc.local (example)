@@ -1,0 +1,22 @@
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+# Enable GPIO 191 so that wireless works with mini PCIe cards
+echo 191 > /sys/class/gpio/export;
+echo out > /sys/class/gpio/gpio191/direction;
+echo 1 > /sys/class/gpio/gpio191/value;
+# Reload the wifi driver for the Intel mini PCIe card
+modprobe -r iwlwifi;
+modprobe iwlwifi;
+
+exit 0

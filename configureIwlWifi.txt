@@ -1,0 +1,41 @@
+Some menu navigation instructions for preparing the kernel configuration to build the Intel iwlwifi drivers.
+
+# This assumes that you've executing prepareDriver.sh and that you're in 'make menuconfig'
+you're in the /usr/src/kernel directory
+
+General setup -->
+Local version - append version information to the version string
+
+<COMMENT>
+# Open up a new terminal and execute)
+# uname -r
+# 3.10.40-g8c4516e
+# This is from the Linux for Tegra LT4 21.1 release Nov, 2014
+# if you need the kernel id; the initial numbers (3.10.40) should match the kernel revision you're building against
+# the identifier (-g8c4516e) is the kernel revision that you're trying to build against
+(Back to menu config)
+</COMMENT>
+
+Enter
+-g8c4516e
+into the Local version - append to kernel release dialog box
+This will build the drivers for this specific kernel
+Exit the Dialog
+Kernel Configuration
+Device Drivers
+Network Device Support (hit 'e' key twice)
+Wireless LAN -->
+Intel Wireless WiFi Next Gen AGN - Wireless-N/Advanced-N/Ultimate-N (iwlwifi)
+'M' to select module version
+'M' to select Intel Wireless WiFi DVM Firmware Support
+'M' to select Intel Wireless Wifi MVM Firmware Support
+Menu Select <Save> to save the .config file
+Filename dialog should be '.config'
+<CR> and <OK>
+<Exit>
+
+Exit menu config
+
+
+
+
