@@ -16,7 +16,7 @@ IMPORTANT: All shell files must be run as root
 
 NOTE: You may want to open configureIwlWifi.txt for guidance of navigating the menuconfig menus before the first step.
 
-# Install prerequisites and specify kernel modules and drivers to be built
+### Install prerequisites and specify kernel modules and drivers to be built
 $ sudo ./prepareDriver.sh
 # Build the modules and drivers
 # Close configureIwlWifi.txt if open
