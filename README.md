@@ -39,7 +39,7 @@ $ sudo gedit /etc/rc.local
 
 Add this next bit at the end before the exit 0 instruction
 
-<ADD THIS>
+```
 # Enable GPIO 191 so that wireless works with mini PCIe cards
 echo 191 > /sys/class/gpio/export;
 echo out > /sys/class/gpio/gpio191/direction;
@@ -47,9 +47,10 @@ echo 1 > /sys/class/gpio/gpio191/value;
 # Reload the wifi driver for the Intel mini PCIe card
 modprobe -r iwlwifi;
 modprobe iwlwifi;
-</ADD THIS>
+```
 
-Make sure to save the file
+Make sure to save the file.
+
 At this point everything should be installed. Reboot the Jetson
 
 
