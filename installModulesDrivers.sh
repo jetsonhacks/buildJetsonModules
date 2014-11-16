@@ -1,3 +1,4 @@
+#!/bin/sh
 # Copy wireless drivers for LT4 21.1 on the NVIDIA Jetson TK1
 if [ $(id -u) != 0 ]; then
    echo "This script requires root permissions"

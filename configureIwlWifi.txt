@@ -21,6 +21,7 @@ Enter
 into the Local version - append to kernel release dialog box
 This will build the drivers for this specific kernel
 Exit the Dialog
+Exit General Setup
 Kernel Configuration
 Device Drivers
 Network Device Support (hit 'e' key twice)
