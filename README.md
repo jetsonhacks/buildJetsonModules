@@ -55,4 +55,3 @@ At this point everything should be installed. Reboot the Jetson.
 
 After Reboot, go to Network Icon in upper right corner and configure 7260.
 
-
