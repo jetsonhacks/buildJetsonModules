@@ -14,6 +14,12 @@ Please read through the shell files and adjust for your own purpose.
 
 IMPORTANT: All shell files must be run as root
 
+Step 0.
+
+$ sudo ./maxCPU.sh
+
+Enable performance for CPU, makes the development environment much more stable. Change takes effect until reboot.
+
 NOTE: You may want to open configureIwlWifi.txt for guidance of navigating the menuconfig menus before the first step.
 
 Install prerequisites and specify kernel modules and drivers to be built
@@ -28,7 +34,7 @@ $ sudo ./buildWirelessDrivers.sh
 
 Install new Modules and Drivers
 
-$ sudo installModulesDrivers.sh
+$ sudo ./installModulesDrivers.sh
 
 At this point new modules and drivers should be installed appropriately
 In order to access the mini PCIe wireless card, GPIO pin 191 must be set
