@@ -6,9 +6,6 @@ if [ $(id -u) != 0 ]; then
    exit
 fi
 
-# Don't allow apt-get upgrade of xorg overwrite libglx.so
-# May be fixed in future versions of LT4
-apt-mark hold xserver-xorg-core
 
 # Load prerequisites
 apt-add-repository universe
