@@ -1,5 +1,5 @@
 #!/bin/sh
-# Prepare to build some drivers for LT4 21.1 on the NVIDIA Jetson TK1
+# Prepare to build some drivers on the NVIDIA Jetson TK1
 if [ $(id -u) != 0 ]; then
    echo "This script requires root permissions"
    echo "$ sudo "$0""
@@ -13,7 +13,7 @@ apt-get update
 apt-get install libncurses5-dev -y
 # Get the kernel source for LT4 21.1
 cd /usr/src/
-wget http://developer.download.nvidia.com/mobile/tegra/l4t/r21.1.0/sources/kernel_src.tbz2
+wget http://developer.download.nvidia.com/embedded/L4T/r21_Release_v5.0/source/kernel_src.tbz2
 # Decompress
 tar -xvf kernel_src.tbz2
 cd kernel
